@@ -1,0 +1,144 @@
+<html lang="es">
+  <head>
+  <title>Calculadora Esquetiometríca</title>
+  <script type="text/javascript" src="stoichData.js"></script>
+  <script type="text/javascript" src="stoichProg.js"></script>
+  <link rel="icon" href="https://www.freeiconspng.com/thumbs/chemical-icon-png/chemical-icon-png-6.png">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Activar Navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Estequiometría</a>
+            </div>
+        </div>
+    </nav>                                    
+
+    <header class="intro-header" style="background-image: url('img/home.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Calculadora Estequiometríca</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <iframe src="calculadora.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="480px" width="100%" allowfullscreen=""></iframe>
+    <p><br></p>
+    <p><hr></p>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">» Instrucciones</h2>
+                    <p>Se usa notación convencional, es decir, la primera letra de un elemento está en mayúscula
+                        y la segunda es una letra pequeña. Ingrese la ecuación como se muestra a continuación. Allí
+                    debe haber un espacio antes y después de los signos + y -&gt;. Cuando se usa notación científica, <mark> debe haber un espacio antes y después del signo x </mark>.</p>
+                  
+                    <p>Después de ingresar la ecuación balanceada, puede especificar cualquiera de los reactivos
+                        y su cantidad. Tenga en cuenta que debido a que SO<sub>2</sub> es el primer reactivo en el
+                        ecuación, aparece como el primer reactivo en la lista. También tenga en cuenta la entrada
+                    formato para notación científica. Esta calculadora no puede resolver problemas de reactivo limitante.<br></p>
+                <p>Para utilizar correctamente la calculadora, utiliza los siguientes ejemplos:</p>
+                <p><hr></p>
+                <h3>» Ejemplo 1:</h3>
+                <p>¿Cuántos gramos de SO<sub>3</sub> se obtienen a partir de 5.00 g de SO<sub>2</sub>?</p>
+                <ol>
+                    <li>Borre utilizando el botón <b>Borrar Ent/Sal</b></li>
+                    <li>Escriba la ecuación balanceada 2SO<sub>2</sub> + O<sub>2</sub> -&gt; 2SO<sub>3</sub> en la casilla correspondiente.</li>
+                    <li>En <b>Unidad Entrada</b> seleccione gramos</li>
+                    <li>Escriba 2SO<sub>2</sub> en el primer cuadro de valores.</li>
+                    <li>Escriba en el cuadro derecho 5.00 </li>
+                    <li>Seleccione gramos en <b>Unidad Salida</b></li>
+                    <li>Haga clic en <b>Calcular Valores</b></li>
+                    <li>Obtendrá una respuesta de 6.25 gramos.</li>
+                        <img class="img-responsive pad" alt="Photo" src="img/img1.png">
+                    <li>La calculadora le dará también 1.25 gramos requeridos de O<sub>2</sub>.</li>			 
+                </ol>
+                <p><hr></p>
+                <h3>» Ejemplo 2:</h3>
+                <p>¿Cuántos gramos de SO<sub>3</sub> se obtienen a partir de 1.53 g de O<sub>2</sub>?</p>
+                <ol>
+                    <li>Borre utilizando el botón <b>Borrar Ent/Sal</b></li>
+                    <li>Escriba la ecuación balanceada 2SO<sub>2</sub> + O<sub>2</sub> -&gt; 2SO<sub>3</sub> en la casilla correspondiente.</li>
+                    <li>En <b>Unidad Entrada</b> seleccione gramos</li>
+                    <li>Escriba O<sub>2</sub> en el segundo cuadro de valores (observe que O<sub>2</sub> es el segundo reactivo).</li>
+                    <li>Escriba en el cuadro derecho 1.53 </li>
+                    <li>Seleccione gramos en <b>Unidad Salida</b></li>
+                    <li>Haga clic en <b>Calcular Valores</b></li>
+                    <li>Obtendrá una respuesta de 7.66 gramos.</li>
+                        <img class="img-responsive pad" alt="Photo" src="img/img2.png">
+                    <li>La calculadora le dará también 6.13 gramos requeridos de SO<sub>2</sub>.</li>			 
+                </ol>
+                <p><hr></p>
+                <h3>» Ejemplo 3:</h3>
+                <p>¿Cuántos gramos de SO<sub>2</sub> se requieren para obtener 2.56 gramos SO<sub>3</sub>?</p>
+                <ol>
+                    <li>Borre utilizando el botón <b>Borrar Ent/Sal</b></li>
+                    <li>Escriba la ecuación balanceada inversa 2SO<sub>3</sub> -&gt; 2SO<sub>2</sub> + O<sub>2</sub> en la casilla correspondiente.</li>
+                    <li>En <b>Unidad Entrada</b> seleccione gramos</li>
+                    <li>Escriba SO<sub>3</sub> en el primer cuadro de valores.</li>
+                    <li>Escriba en el cuadro derecho 2.56 </li>
+                    <li>Seleccione gramos en <b>Unidad Salida</b></li>
+                    <li>Haga clic en <b>Calcular Valores</b></li>
+                    <li>Obtendrá una respuesta de 2.05 gramos.</li>
+                        <img class="img-responsive pad" alt="Photo" src="img/img3.png">
+                    <li>La calculadora le dará también 5.12 x 10<sup>-1</sup> gramos de O<sub>2</sub>.</li>			 
+                </ol>
+                <p><hr></p>
+                <h3>» Ejemplo 4:</h3>
+                <p>Cuántos moles de (NH<sub>2</sub>)<sub>2</sub>CO (urea) se requieren para obtener 1.75 gramos de CO<sub>2</sub> (dióxido de carbono) a partir de la siguiente ecuación balanceada:</p>
+                <p>(NH<sub>2</sub>)<sub>2</sub>CO + H<sub>2</sub>O -&gt; 2NH<sub>3</sub> + CO<sub>2</sub></p>
+                
+                <ol>
+                    <li>Borre utilizando el botón <b>Borrar Ent/Sal</b></li>
+                    <li>El dato de la cantidad conocida siempre debe escribirse del lado izquierdo, y en este caso por ser el segundo producto, en el segundo cuadro.</li>
+                    <li>Para hacer cálculo es necesario invertir la reacción <b>Ecn Inversa</b>.<p></p>
+                      <p>2NH<sub>3</sub> + CO<sub>2</sub> -&gt; (NH<sub>2</sub>)<sub>2</sub>CO + H<sub>2</sub>O</p> 
+                    </li><li>En <b>Unidad Entrada</b> seleccione gramos</li>
+                    <li>Seleccione moles en <b>Unidad Salida</b>.</li>
+                    <li>Haga clic en <b>Calcular Valores</b></li>
+                    <li>Obtendrá una respuesta de 3.98 x 10<b>-2</b> moles.</li>
+                        <img class="img-responsive pad" alt="Photo" src="img/img4.png">
+                    <li>La calculadora le dará también 7.95 x 10<sup>-2</sup> gramos NH<sub>3</sub> y 3.98 x 10<sup>-2</sup> moles de H<sub>2</sub>O.</li>			 
+                </ol>
+            </div>
+        </div>
+    </div>
+</article>
+    <br>
+    <hr>
+
+  <footer>
+                <p class="copyright text-muted">Proyecto Quimica &copy; Universidad Mayor </p>
+                <p class="copyright text-muted">Proyecto realizado por:</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="js/jquery.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/clean-blog.min.js"></script>
+  </body></html>

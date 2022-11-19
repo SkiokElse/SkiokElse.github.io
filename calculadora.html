@@ -1,0 +1,129 @@
+<html lang="es">
+  <head>
+  <title>Calculadora Esquetiometríca</title>
+  <script type="text/javascript" src="stoichData.js"></script>
+  <script type="text/javascript" src="stoichProg.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  </head>
+  <body background="fondo.jpg" bgproperties="fixed" link="red" alink="red" vlink="red" onload="init()" marginwidth="0" marginheight="0">
+  
+  
+    <form id="form1">
+      <table border="0" cellpadding="0" width="100%" cellspacing="0" align="center">
+        <tbody><tr> 
+          <td style="position:absolute; left:440; top:40;"><div align="center"> 
+              <input type="text" name="resVel" value="2SO2 + O2 -> 2SO3" size="75">
+            </div></td>
+        </tr>
+        <tr> 
+          <td style="position:absolute; left:500; top:100; text-decoration:underline; font-weight:1000"><div align="center">Reactivos</div></td>
+          <td style="position:absolute; left:780; top:100; text-decoration:underline; font-weight:1000"><div align="center">Productos</div></td>
+        </tr>
+        <tr> 
+          <td style="position:absolute; left:500; top:130; text-decoration:underline; font-weight:1000"><div align="center">Unidad de Entrada:</div></td>
+          <td style="position:absolute; left:780; top:130; text-decoration:underline; font-weight:1000"><div align="center">Unidad de Salida:</div></td>
+        </tr>
+        <tr> 
+          <td style="position:absolute; left:500; top:210;"><div align="center"> 
+              <input type="text" name="reactant2" size="12">
+            </div></td>
+          <td style="position:absolute; left:625; top:210;"><div align="center"> 
+              <input type="text" name="reactant" size="10">
+            </div></td>
+          <td style="position:absolute; left:780; top:210;"><div align="center"> 
+              <input type="text" name="product" size="12">
+            </div></td>
+          <td style="position:absolute; left:905; top:210;"><div align="center"> 
+              <input type="text" name="product" size="10">
+            </div></td>
+        </tr>
+        <tr> 
+          <td style="position:absolute; left:500; top:240;"><div align="center"> 
+              <input type="text" name="reactant" size="12">
+            </div></td>
+          <td style="position:absolute; left:625; top:240;"><div align="center"> 
+              <input type="text" name="reactant" size="10">
+            </div></td>
+          <td style="position:absolute; left:780; top:240;"><div align="center"> 
+              <input type="text" name="product" size="12">
+            </div></td>
+          <td style="position:absolute; left:905; top:240;"><div align="center"> 
+              <input type="text" name="product" size="10">
+            </div></td>
+        </tr>
+        <tr> 
+          <td style="position:absolute; left:500; top:270;"><div align="center"> 
+              <input type="text" name="reactant3" size="12">
+            </div></td>
+          <td style="position:absolute; left:625; top:270;"><div align="center"> 
+              <input type="text" name="reactant" size="10">
+            </div></td>
+          <td style="position:absolute; left:780; top:270;"><div align="center"> 
+              <input type="text" name="product" size="12">
+            </div></td>
+          <td style="position:absolute; left:905; top:270;"><div align="center"> 
+              <input type="text" name="product" size="10">
+            </div></td>
+        </tr>
+        <tr> 
+          <td style="position:absolute; left:500; top:300;"><div align="center"> 
+              <input type="text" name="reactant" size="12">
+            </div></td>
+          <td style="position:absolute; left:625; top:300;"><div align="center"> 
+              <input type="text" name="reactant" size="10">
+            </div></td>
+          <td style="position:absolute; left:780; top:300;"><div align="center"> 
+              <input type="text" name="product" size="12">
+            </div></td>
+          <td style="position:absolute; left:905; top:300;"><div align="center"> 
+              <input type="text" name="product" size="10">
+            </div></td>
+        </tr>
+        <tr> 
+          <td style="position:absolute; left:500; top:300;"><div align="center"> 
+              <input type="text" name="reactant" size="12">
+            </div></td>
+          <td style="position:absolute; left:625; top:300;"><div align="center"> 
+              <input type="text" name="reactant" size="10">
+            </div></td>
+          <td style="position:absolute; left:780; top:300;"><div align="center"> 
+              <input type="text" name="product" size="12">
+            </div></td>
+          <td style="position:absolute; left:905; top:300;"><div align="center"> 
+              <input type="text" name="product" size="10">
+            </div></td>
+        </tr>
+      </tbody></table>
+    </form>
+    <div style="position:absolute; left:450; top:350;"><input type="button" value="Calcular Valores" name="B1" onclick="checkInputs()"></div>
+    <div style="position:absolute; left:620; top:350;"><input type="button" value="Borrar Valores" name="B1" onclick="clearFields(0)"></div>
+    <div style="position:absolute; left:773; top:350;"><input type="button" value="Borrar Unidades" name="B1" onclick="clearFields(1)"></div>
+    <div style="position:absolute; left:945; top:350;"><input type="button" value="Ec. Inversa" name="B1" onclick="reverseEquation()"></div>
+    <div style="position:absolute; left:500; top:160;">
+      <select name="D1" size="1" onchange="inputUnit = selectedIndex;">
+      <option value="g">Gramos</option>
+      <option value="n">Moles</option>
+      <option value="L">Litros</option>
+      <option selected="" value="n">Moléculas</option>
+      </select>   
+    </div> 
+    <div style="position:absolute; left:780; top:160;"> 
+      <select name="D2" size="1" onchange="outputUnit = selectedIndex;">
+        <option value="g">Gramos</option>
+        <option value="n">Moles</option>
+        <option value="L">Litros</option>
+        <option selected="" value="n">Moléculas</option>
+      </select>
+    </div>
+    <div style="position:absolute; left:720; top:425;"><font size="5"><strong><a href="calculadora.html"><font color="#3D3D3D">Reiniciar</font></a></strong></font></div>
+  
+  
+  <script type="text/javascript"> (function(d, w) { var x = d.getElementsByTagName('SCRIPT')[0]; var f = function() { var _id = 'lexity-pixel'; var _s = d.createElement('script'); _s.id = _id; _s.type = 'text/javascript'; _s.async = true; _s.src = "//np.lexity.com/embed/YW/67775800cda36545318e13048d3c3e83?id=149770fd1eaf"; if (!document.getElementById(_id)) { x.parentNode.insertBefore(_s, x); } }; w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); }(document, window)); </script><script type="text/javascript"> (function(d, w) { var x = d.getElementsByTagName('SCRIPT')[0]; var f = function() { var _id = 'lexity-pixel'; var _s = d.createElement('script'); _s.id = _id; _s.type = 'text/javascript'; _s.async = true; _s.src = "//np.lexity.com/embed/YW/67775800cda36545318e13048d3c3e83?id=149770fd1eaf"; if (!document.getElementById(_id)) { x.parentNode.insertBefore(_s, x); } }; w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); }(document, window)); </script>
+  
+  </body></html>
